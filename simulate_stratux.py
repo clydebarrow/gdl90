@@ -17,7 +17,7 @@ import os
 
 # Default values for options
 #DEF_SEND_ADDR="255.255.255.255"
-DEF_SEND_ADDR="10.1.1.255"
+DEF_SEND_ADDR="192.168.1.131"
 DEF_SEND_PORT=4000
 
 LATLONG_TO_RADIANS = math.pi / 180.0
@@ -68,11 +68,11 @@ if __name__ == '__main__':
     encoder = gdl90.encoder.Encoder()
     
     callSign = 'N12345'
-    latCenter = 30.456447222222224
-    longCenter = -98.2941888888889
+    latCenter = -28.149444444444445
+    longCenter = 151.94305555555556
     pathRadius = 0.25  # degrees
     angle = 0.0
-    altitude = 0
+    altitude = 1800
     heading = 0
     groundspeed = 0
     verticalspeed = 0
@@ -88,10 +88,10 @@ if __name__ == '__main__':
 
     # traffic tuples: lat, long, alt, hspeed, vspeed, hdg, callSign, address
     traffic = [
-        (30.60, -98.00, 3000, 100, 500, 45, 'NBNDT1', 0x000001),
-        (30.60, -98.40, 2500, 120, 0, 295, 'NBNDT2', 0x000002),
-        (30.18, -98.13, 3200, 150, -100, 285, 'NBNDT3', 0x000003),
-        (30.13, -98.30, 2000, 110, 250, 10, 'NBNDT4', 0x000004),
+        (-28.60, 152.00, 3000, 100, 500, 45, 'NBNDT1', 0x000001),
+        (-28.60, 152.40, 2500, 120, 0, 295, 'NBNDT2', 0x000002),
+        (-28.18, 152.13, 3200, 150, -100, 285, 'NBNDT3', 0x000003),
+        (-28.13, 152.30, 2000, 110, 250, 10, 'NBNDT4', 0x000004),
     ]
     
     uptime = 0
